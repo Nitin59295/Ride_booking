@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Vehicle</title>
+</head>
+<body>
+    <h1>Add New Vehicle</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.name.label }}
+            {{ form.name(class="form-control") }}
+        </div>
+        <div>
+            {{ form.model.label }}
+            {{ form.model(class="form-control") }}
+        </div>
+        <button type="submit">Add Vehicle</button>
+    </form>
+</body>
+</html>

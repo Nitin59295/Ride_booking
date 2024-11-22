@@ -6,5 +6,16 @@ from models import db, Users
 
 class UsersForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired(), Length(max=100)])
-    designation = StringField('Designation', validators=[DataRequired(), Length(max=100)])
-    submit = SubmitField('Submit')
+    email = StringField('Email', validators=[DataRequired(), Length(max=100)])
+    password = StringField('Password', validators=[DataRequired(), Length(max=50)])
+    submit = SubmitField('Add User')
+
+class VehicleForm(FlaskForm):
+    name = StringField('Vehicle Name', validators=[DataRequired(), Length(max=100)])
+    model = StringField('Vehicle Model', validators=[DataRequired(), Length(max=50)])
+    submit = SubmitField('Add Vehicle')
+
+
+
+# class RideForm(FlaskForm):
+#     name
